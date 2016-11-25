@@ -1,0 +1,85 @@
+{
+  "name": "ionic-webpack-boilerplate",
+  "version": "0.0.1",
+  "description": "Ionic 1 scaffold with Typescript and ng-metadata",
+  "main": "app/app.js",
+  "config": {
+    "port": "9000"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "typings": "typings",
+    "postinstall": "typings install && bower install && mkdir platforms && mkdir plugins && mkdir www && ionic state restore",
+    "start": "npm run server",
+    "build": "NODE_ENV=production webpack --config webpack-build.config.js",
+    "build:dev": "webpack --progress --profile --colors --display-error-details --display-cached",
+    "test": "karma start",
+    "test:ci": "karma start --browsers Firefox",
+    "test:watch": "npm run test -- --auto-watch --no-single-run",
+    "clean": "rimraf doc/ coverage/ dist/",
+    "server": "webpack-dev-server --port 9000 --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "ISC",
+  "dependencies": {
+    "@types/angular": "1.5.16",
+    "@types/core-js": "0.9.34",
+    "angular": "1.5.8",
+    "core-js": "2.4.1",
+    "ng-metadata": "3.0.3",
+    "reflect-metadata": "0.1.8",
+    "rxjs": "5.0.0-rc.1",
+    "ts-helpers": "1.1.2"
+  },
+  "devDependencies": {
+    "@types/angular-mocks": "1.5.5",
+    "@types/jasmine": "2.5.35",
+    "@types/lodash": "4.14.37",
+    "@types/node": "6.0.45",
+    "angular-mocks": "1.5.8",
+    "awesome-typescript-loader": "2.2.4",
+    "codelyzer": "0.0.28",
+    "copy-webpack-plugin": "4.0.1",
+    "css-loader": "0.26.0",
+    "file-loader": "0.9.0",
+    "html-webpack-plugin": "2.24.1",
+    "istanbul-instrumenter-loader": "1.0.0",
+    "jasmine-core": "2.5.2",
+    "json-loader": "0.5.4",
+    "karma": "1.3.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-coverage": "1.1.1",
+    "karma-firefox-launcher": "1.0.0",
+    "karma-jasmine": "1.0.2",
+    "karma-mocha-reporter": "2.2.1",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-webpack": "1.8.0",
+    "lodash": "4.17.2",
+    "node-sass": "3.13.0",
+    "phantomjs-prebuilt": "2.1.13",
+    "raw-loader": "0.5.1",
+    "remap-istanbul": "0.7.0",
+    "resolve-url-loader": "^1.6.0",
+    "rimraf": "2.5.4",
+    "sass-loader": "4.0.2",
+    "source-map-loader": "0.1.5",
+    "style-loader": "0.13.1",
+    "tslint": "3.15.1",
+    "tslint-loader": "2.1.5",
+    "typescript": "2.0.10",
+    "webpack": "1.13.3",
+    "webpack-dev-server": "1.16.2"
+  },
+  "engines": {
+    "node": ">= 6.x",
+    "npm": ">= 3"
+  },
+  "cordovaPlugins": [
+    "ionic-plugin-keyboard"
+  ]
+}

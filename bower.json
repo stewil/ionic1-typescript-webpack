@@ -1,0 +1,22 @@
+{
+  "name": "ionic-webpack-boilerplate",
+  "version": "0.0.1",
+  "description": "Ionic 1 scaffold with Typescript and ng-metadata",
+  "main": "app/app.js",
+  "authors": [],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies":{
+    "ionic": "driftyco/ionic-bower#~v1.3.2",
+    "ionic-platform-web-client": "~0.7.1",
+    "ngCordova": "v0.1.26-alpha"
+  },
+  "ignore": [
+    "**/.*",
+    "typings",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

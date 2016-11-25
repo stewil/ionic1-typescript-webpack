@@ -1,0 +1,17 @@
+www
+.tmp
+docs/
+*.iml
+.idea
+node_modules
+bower_components
+src/**/*.js
+src/**/*.js.map
+dist
+ts-out
+plugins
+typings
+coverage
+platforms
+npm-debug.log
+*.keystore
